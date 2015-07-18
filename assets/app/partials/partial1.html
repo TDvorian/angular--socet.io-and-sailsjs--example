@@ -1,0 +1,30 @@
+<p>Исполнено согласно заданию</p>
+Список задач, добавление, редактирование, удаление, поля:</br>
+Название задачи, Описание задачи, Дата создания задачи, Кто создал.</br>
+Сортировка по дате и названию,</br>
+технологии backend: rest api, sails.js,</br>
+frontend: angular.js, socket.io</br>
+<p>Сортировка: "клик" на название столбцов (Title,Date Created) по умолчанию DESC title </p>
+<p>Редактирование: "На лету" текст курсивом редактируетса </p>
+<p>Удаление/Добавление: По кнопках (Проверка заполненния полей только на сервере)</p>
+<ul>
+    <li class="rowClass"> <b class="block1"  onclick="titleSort();"> Title</b><b class="block1" onclick="dateSort()";> Date Create</b><b class="block1"> Author</b><b class="block1"> Description</b> </li>
+</ul>
+<ul>
+    <li class="rowClass"> <b class="block1"> <input type="text" id=title></b><b class="block1"> auto set </b><b class="block1"> <input type="text" id=author></b><b class="block1"> <input type="text" id=desc></b>
+        <button ng-click="action()">
+            CREATE
+        </button>
+    </li>
+</ul>
+<ul>
+    <li class="rowClass" ng-repeat="item in items">
+        <button ng-click="action(item.id)">
+            DELETE
+        </button>
+        <b><i class="block1" contentEditable="true" id=title_{{item.id}} ng-model="content"> {{item.title}} </i></b>|<b class="block1"> {{item.date}} </b>| <b class="block1">{{item.author}}</b>
+
+        <b> <i  class="block1" contentEditable="true" id=desc_{{item.id}} ng-model="content">{{item.description}}</i></b>
+
+    </li>
+</ul>
