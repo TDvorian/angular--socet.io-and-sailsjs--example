@@ -86,7 +86,12 @@ module.exports = {
         var sortType = req.param('sortType')
         if (!sort) {
             sort = 'id';
-        }
+        }else{
+		if((sort!="title")||(sort!="date")){
+			sort = 'id';
+		}
+		
+		}
         if (sortType == 'DESC') {
             sortType = 'DESC';
         } else {
