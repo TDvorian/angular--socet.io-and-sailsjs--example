@@ -33,7 +33,6 @@ module.exports = {
         }
 
         Statement.create(params).exec(function(err, statement) {
-            console.log(err);
             if (err) {
                 res.send(400, {
                     description: err
