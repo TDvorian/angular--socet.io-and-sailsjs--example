@@ -46,8 +46,8 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
  'get /statement/index': {
-    controller: 'statement', // Контроллер
-    action: 'index' // Действие
+    controller: 'statement', 
+    action: 'index' 
   },
     'post /statement/create': {
     controller: 'statement',
@@ -62,5 +62,26 @@ module.exports.routes = {
   'post /statement/update': {
     controller: 'statement',
     action: 'update'
+  },
+  //RESTFUL API
+  
+   'get /statement': {
+    controller: 'statement', 
+    action: 'index' 
+  },
+    'post /statement': {
+    controller: 'statement',
+    action: 'create'
+  },
+
+  'delete /statement': {
+    controller: 'statement',
+    action: 'delete'
+  },
+
+  'put /statement': {
+    controller: 'statement',
+    action: 'update'
   }
 };
+  
